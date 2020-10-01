@@ -83,11 +83,10 @@ Here's an example of my profile
 ```
 4. Commit your changes by pressing the green Commit new file button.
 5. Create a new pull request from your forked repository (Click the New Pull Request button located at the top of your repo)
-8. Star this repository if you had fun!
-9. Enjoy and welcome to Hacktoberfest 2020 and Keep Contributing :)
+6. Star this repository if you had fun!
+7. Enjoy and welcome to Hacktoberfest 2020 and Keep Contributing :)
 
 ***
-
 ## 👨 Developed & Maintained By
 
 ```
