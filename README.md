@@ -65,10 +65,10 @@ It's very easy. You don't need to be an expert in coding and programming. Here a
 3. Set the file name with `Your-Full-Name.md` and insert your short profile with the following text
 ```
 ### YOUR FULL NAME
-- Photo: YOUR PHOTO URL
-- Location: YOUR CITY, COUNTRY
-- Bio: YOUR 1-2 LINES BIO
-- Github: YOUR GITHUB URL
+- Photo: https://avatars2.githubusercontent.com/u/49792938?s=400&u=8a709ffa10b8cfd08c4561b37c02d17abb70927f&v=4
+- Location: Karachi, Pakistan
+- Bio: I am a flutter mobile application developer
+- Github: https://github.com/osamaasifoak/
 ***
 ```
 Here's an example of my profile
