@@ -8,7 +8,7 @@ int buzz=8;
 int ir_patient = A2;
 int cnt=0;
 int val;
-int pushpin=7;
+
 
 
 /*IO pin numbers. fm-front motor,ir sensor input pins are 11,6(front,right)
