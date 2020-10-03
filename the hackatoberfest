@@ -1,0 +1,89 @@
+int ir_left = A0;
+int ir_right = A1;
+int fm1=3;
+int fm2=5;
+int fm3=11;
+int fm4=12;
+int buzz=8;
+int ir_patient = A2;
+int cnt=0;
+int val;
+int pushpin=7;
+
+
+/*IO pin numbers. fm-front motor,ir sensor input pins are 11,6(front,right)
+//fm1,fm2-to control  left motor,fm3 fm4 right motor*/
+int a;
+int b;
+int c;
+/*a,b sensor readings front and right respectively.*/
+int thresh=900;
+/*threshold-sensorvalue*/
+void setup() {
+  pinMode(ir_left,INPUT);
+  pinMode(ir_right,INPUT);
+  pinMode(ir_patient,INPUT);
+  pinMode(pushpin,INPUT);
+  pinMode(buzz,OUTPUT);
+  /*declaration of four pins for motor control.Signal pins
+  //fm- motor driver*/
+  pinMode(fm1,OUTPUT);
+  pinMode(fm2,OUTPUT);
+  pinMode(fm3,OUTPUT);
+  pinMode(fm4,OUTPUT);
+  }
+
+void loop() {
+  Serial.begin(9600);
+  a= 1000;
+  b= 7000;
+  c= 1000;
+  /*reading IR sensor value*/
+  /*the below while loop makes sure that robot is on line by 
+  checking whether ir_front is less than threshold*/
+  
+  if((a<=thresh)&&(b<=thresh)){forward();}
+  if((a<=thresh)&&(b>=thresh)){right();}
+  if((a>=thresh)&&(b<=thresh)){left();}
+  if((a>=thresh)&&(b>=thresh)){
+    if(c>=thresh){val = 1;
+      Serial.println("Patient line detected");
+  if(val==HIGH){cnt=cnt+10;}
+  else{Serial.println("Asked to leave");
+  forward();blizz();}
+  if(cnt>31){Serial.println("user forgot leaving");
+  forward(); blizz();}}
+  else{halt();}}
+  
+  }
+     
+      void forward(){
+      Serial.println("forward");
+      analogWrite(fm1,200);
+      analogWrite(fm2,0);
+      analogWrite(fm3,200);
+      analogWrite(fm4,0);
+      cnt=0;}
+      void halt(){;
+        analogWrite(fm1,0);
+      analogWrite(fm2,0);
+      analogWrite(fm3,0);
+      analogWrite(fm4,0);
+        }
+      void right(){
+        
+        analogWrite(fm1,0);
+        analogWrite(fm2,200);
+        analogWrite(fm3,200);
+        analogWrite(fm4,0);
+        }
+        void blizz(){
+          digitalWrite(buzz,HIGH);
+          delay(2000);
+          digitalWrite(buzz,LOW);}
+     void left(){
+       
+      analogWrite(fm1,200);
+      analogWrite(fm2,0);
+      analogWrite(fm3,0);
+      analogWrite(fm4,200);}
