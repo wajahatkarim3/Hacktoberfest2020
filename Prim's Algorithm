@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define V 4
+
+int selectmin(vector<int>&value,vector<bool>&setMST)
+{
+	int min=INT_MAX;
+	int ver;
+	for(int i=0; i<V; i++)
+	{
+		if(setMST[i]==false && value[i]<min)
+        {
+        	ver=i;
+        	min=value[i];
+		}
+	}
+	return ver;
+}
+void MSTPrim(int graph[][V], int v)
+{
+	int par[v];
+	vector<int>value(V,INT_MAX);
+	vector<bool>mstset(V,false);
+	par[v]=-1;
+	value[v]=0;
+	for(int i=0; i<V-1; i++)
+	{
+		int u=selectmin(value,mstset);
+		mstset[u]=true;
+		for(int j=0; j<V; j++)
+		{
+			if(graph[u][j]!=0 && mstset[j]==false && graph[u][j]<value[j])
+			{
+				value[j]=graph[u][j];
+				par[j]=u;
+			}
+		}
+	}
+	for(int i=1; i<V;i++)
+	cout<<"u->v"<<par[i]<<"->"<<i<<"wt= "<<graph[par[i]][i]<<endl;
+}
+int main()
+{
+
+	int g[V][V]={{0,4,7,8},
+	              {4,0,3,0},
+				   {7,3,0,5},
+				   {8,0,5,0}
+				   };
+     MSTPrim(g,1);						
+}
