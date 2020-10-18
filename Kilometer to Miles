@@ -1,0 +1,4 @@
+a=input("enter speed in kmph")
+kilom=int(a)
+miles=kilom*0.62
+print("The distance in miles is ",miles)
