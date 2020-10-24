@@ -3,4 +3,6 @@
 - Location: Maharashtra, India
 - Bio: Google Developer Expert . Android Developer . Open Source Contributor . Writer . Speaker . 
 - Github: https://github.com/satyam1503
+-hacktoberfest-accepted
 ***
+hacktoberfest-accepted
