@@ -1,0 +1,6 @@
+git pull : to pull changes from remote
+git push: to upload changes to remote
+git stash: to  temporarily save your changes made to a repo 
+git stash pop: to retrieve the changes made
+git branch: to get a list of branches
+git checkout: to locate and open a particular branch
