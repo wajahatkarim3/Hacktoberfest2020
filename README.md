@@ -52,13 +52,15 @@ During the entire month of October 2020, all you have to do is contribute to any
 
 If you’ve never contributed to open source before, this is the perfect time to get started because Hacktoberfest provides a large list of available contribution opportunities (and yes, there are always plenty for beginners too).
 
+If you want to get more swags, then check this page out: https://hacktoberfest-swag.com/
+
 ***
 
 # 👕 Why Should I Contribute?
 Hacktoberfest has a simple and plain moto.
 > Support open source and earn a limited edition T-shirt!
 
-So, yes! You can win a T-Shirt and few awesome stickers to attach on your laptop. On plus side, you will get into beautiful world of open source and get the international exposure. 
+So, yes! You can win a T-Shirt and few awesome stickers to attach on your laptop. On plus side, you will get into beautiful world of open source and get the international exposure. There is also another possibility that you may ask a tree to be planted for you instead of getting a T-shirt which in turn makes you not a contributor in virtual world but also in real world to the the advantage of environment.
 
 ***
 
